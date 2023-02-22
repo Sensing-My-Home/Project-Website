@@ -1,4 +1,4 @@
-import { CssBaseline, AppBar, Toolbar, Typography, Box, Link, Container, Grid, Card, CardContent, Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
+import { CssBaseline, AppBar, Toolbar, Typography, Box, Link, Container, Grid, Stack, Accordion, AccordionSummary, AccordionDetails } from "@mui/material"
 import HomeIcon from '@mui/icons-material/Home';
 import AvatarCard from "./components/AvatarCard";
 import MembersInfo from "./components/AvatarCard/info";
@@ -13,10 +13,16 @@ function App() {
       <CssBaseline />
 
       {/* Navbar */}
-      <AppBar position="relative">
+      <AppBar position="fixed">
         <Toolbar>
-          <HomeIcon sx={{ mr: 2 }} />
-          <Typography variant="h6">Sensing My Home</Typography>
+          <Link href="#" color="inherit" underline="none">
+            <Stack direction="row" alignItems="center">
+              <HomeIcon sx={{ mr: 2 }} />
+              <Typography variant="h6">Sensing My Home</Typography>
+            </Stack>
+          </Link>
+          <Link href="#team" color="inherit" sx={{ ml: 3 }} variant="body1" underline="none">Team</Link>
+          <Link href="#deliveries" color="inherit" sx={{ ml: 3 }} variant="body1" underline="none">Deliveries</Link>
         </Toolbar>
       </AppBar>
       {/* End of Navbar */}
@@ -26,7 +32,7 @@ function App() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            pt: 8,
+            pt: 15,
             pb: 6,
           }}
         >
@@ -49,7 +55,7 @@ function App() {
         {/* End of Hero Unit */}
 
         {/* Project Team */}
-        <Container maxWidth="md">
+        <Container maxWidth="md" id="team">
           <Typography
             component="h1"
             variant="h2"
@@ -57,12 +63,12 @@ function App() {
             color="text.primary"
             gutterBottom
           >
-            Team
+            Project Team
           </Typography>
-          <Grid container direction="row" justifyContent="center" alignItems="center" spacing={4}>
+          <Grid container direction="row" justifyContent="center" alignItems="center" spacing={3}>
             {MembersInfo.map((member, index) => {
               return (
-                <Grid item key={index} xs={6} sm={3} md={3}>
+                <Grid item key={index} xs={6} sm={6} md={4}>
                   <AvatarCard name={member.name} email={member.email} description={member.description} image={member.image} />
                 </Grid>
               )
@@ -72,7 +78,7 @@ function App() {
         {/* End of Project Team */}
 
         {/* Deliveries */}
-        <Container maxWidth="md">
+        <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="deliveries">
           <Typography
               component="h1"
               variant="h2"
@@ -89,10 +95,10 @@ function App() {
                     <Typography>{delivery.name}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={3} justifyContent="center">
                       {delivery.data.map(((file, i) => {
                         return (
-                          <Grid item xs={6} sm={3} md={3} key={i}>
+                          <Grid item xs={12} sm={6} md={4} key={i}>
                             <FileCard name={file.name} link={file.link} icon={file.icon} />
                           </Grid>
                         )
@@ -107,7 +113,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+      <Box sx={{ bgcolor: 'background.paper', p: 5 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           Projeto em Informática (3ºAno LEI)
         </Typography>
