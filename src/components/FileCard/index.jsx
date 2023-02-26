@@ -2,6 +2,15 @@ import { Card, CardContent, Stack, Typography } from "@mui/material";
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TvIcon from '@mui/icons-material/Tv';
 
+function getFileIcon(icon) {
+    switch(icon) {
+        case 'PDF':
+            return (<PictureAsPdfIcon />);
+        default:
+            return (<TvIcon />)
+    }
+}
+
 function FileCard({ name, link, icon }) {
     return (
         <>
@@ -9,7 +18,7 @@ function FileCard({ name, link, icon }) {
                 <Card>
                     <CardContent>
                         <Stack alignItems="center">
-                            {icon === "pdf" ? <PictureAsPdfIcon fontSize='large'/> : <TvIcon fontSize='large'/>}
+                            {getFileIcon(icon)}
                             <Typography>{name}</Typography>
                         </Stack>
                     </CardContent>

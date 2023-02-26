@@ -7,12 +7,12 @@ const Deliveries = [
             {
                 name: "Report",
                 link: "",
-                icon: "pdf"
+                icon: "PDF",
             },
             {
                 name: "Presentation",
                 link: "",
-                icon: "tv"
+                icon: "TV"
             },
         ]
     },
