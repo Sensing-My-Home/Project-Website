@@ -101,7 +101,7 @@ function App() {
             {MembersInfo.map((member, index) => {
               return (
                 <Grid item key={index} xs={6} sm={6} md={4}>
-                  <AvatarCard name={member.name} email={member.email} description={member.description} image={member.image} linkedin={member.linke} github={member.github} />
+                  <AvatarCard name={member.name} email={member.email} description={member.description} image={member.image} linkedin={member.linkedin} github={member.github} />
                 </Grid>
               )
             })}
