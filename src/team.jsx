@@ -1,5 +1,6 @@
 import Artur from './assets/images/artur.jpg'
 import Andre from './assets/images/andre.png'
+import Bruna from './assets/images/bruna.jpg'
 import Daniel from './assets/images/daniel.jpg'
 import Jlo from './assets/images/jlo.png'
 
@@ -24,7 +25,7 @@ const MembersInfo = [
         name: "Bruna Simões",
         email: "brunams21@ua.pt",
         description: "",
-        image: "",
+        image: Bruna,
         github: "https://github.com/Brums21",
         linkedin: "https://www.linkedin.com/in/bruna-melo-858086243/"
     },
