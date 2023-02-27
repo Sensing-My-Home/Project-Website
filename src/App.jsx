@@ -1,12 +1,14 @@
-import { CssBaseline, AppBar, Toolbar, Typography, Box, Link, Container, Grid, Stack, Accordion, AccordionSummary, AccordionDetails, Avatar } from "@mui/material"
+import { CssBaseline, AppBar, Toolbar, Typography, Box, Link, Container, Grid, Stack, Accordion, AccordionSummary, AccordionDetails, Avatar, Divider } from "@mui/material"
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot, TimelineOppositeContent } from '@mui/lab';
 import AvatarCard from "./components/AvatarCard";
-import MembersInfo from "./components/AvatarCard/info";
+import MembersInfo from "./team";
 import Deliveries from "./deliveries";
 import FileCard from "./components/FileCard";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Logo from "./assets/images/logo.png"
 import TimelineInfo from "../timeline";
+import GoalCard from "./components/GoalCard";
+import Goals from  "./goals";
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
               <Typography variant="h6">Sensing My Home</Typography>
             </Stack>
           </Link>
+          <Link href="#goals" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Goals</Link>
           <Link href="#team" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Team</Link>
           <Link href="#timeline" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Timeline</Link>
           <Link href="#deliveries" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Deliveries</Link>
@@ -56,6 +59,33 @@ function App() {
         </Box>
         {/* End of Hero Unit */}
 
+        <Divider variant="middle"/>
+
+        {/* Goals */}
+        <Container maxWidth="md" sx={{ pt:10, pb:6 }} id="goals">
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            Goals
+          </Typography>
+          <Grid container direction="row" justifyContent="center" alignItems="center" spacing={3}>
+            {Goals.map((goal, index) => {
+              return (
+                <Grid item key={index} xs={6} sm={6} md={4}>
+                  <GoalCard icon={goal.icon} title={goal.title} description={goal.description} />
+                </Grid>
+              )
+            })}
+          </Grid>
+        </Container>
+        {/* End of Goals */}
+
+        <Divider variant="middle"/>
+
         {/* Project Team */}
         <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="team">
           <Typography
@@ -65,13 +95,13 @@ function App() {
             color="text.primary"
             gutterBottom
           >
-            Project Team
+            Team
           </Typography>
           <Grid container direction="row" justifyContent="center" alignItems="center" spacing={3}>
             {MembersInfo.map((member, index) => {
               return (
                 <Grid item key={index} xs={6} sm={6} md={4}>
-                  <AvatarCard name={member.name} email={member.email} description={member.description} image={member.image} />
+                  <AvatarCard name={member.name} email={member.email} description={member.description} image={member.image} linkedin={member.linke} github={member.github} />
                 </Grid>
               )
             })}
@@ -79,8 +109,9 @@ function App() {
         </Container>
         {/* End of Project Team */}
 
+        <Divider variant="middle"/>
+
         {/* Timeline */}
-        
         <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="timeline">
         <Typography
             component="h1"
@@ -113,8 +144,10 @@ function App() {
         </Container>
         {/* End of Timeline */}
 
+        <Divider variant="middle"/>
+
         {/* Deliveries */}
-        <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="deliveries">
+        <Container maxWidth="md" sx={{ pt: 10, pb: 10 }} id="deliveries">
           <Typography
             component="h1"
             variant="h2"

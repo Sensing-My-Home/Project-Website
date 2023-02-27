@@ -9,13 +9,13 @@ function AvatarCard({ name, email, description, image, linkedin, github }) {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Avatar alt={name} src={image} sx={{width: 100, height: 100}}/>
-                <Typography variant="body1">{name}</Typography>
-                <Typography variant="body2">{description}</Typography>
-                <Typography variant="caption">{email}</Typography>
+                <Avatar alt={name} src={image} sx={{width: 125, height: 125}}/>
+                <Typography variant="h6">{name}</Typography>
+                <Typography variant="body1">{description}</Typography>
+                <Typography variant="body1">{email}</Typography>
                 <Stack direction="row" spacing={1}>
-                    <Link href="" color="primary"><LinkedInIcon /></Link>
-                    <Link href="" color="inherit"><GitHubIcon /></Link>
+                    <Link href={linkedin} color="primary"><LinkedInIcon /></Link>
+                    <Link href={github} color="inherit"><GitHubIcon /></Link>
                 </Stack>
             </Stack>
         </>

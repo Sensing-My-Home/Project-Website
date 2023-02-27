@@ -2,7 +2,7 @@
 const Deliveries = [
     {
         name: "M1 - Presentation of the lifecycle objectives and calendar for the project.",
-        state: false,
+        state: true,
         data: [
             {
                 name: "Report",
