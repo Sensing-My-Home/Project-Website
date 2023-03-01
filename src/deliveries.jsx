@@ -1,18 +1,14 @@
+import MS1Presentation from './assets/presentations/MS1_Presentation.pptx'
 
 const Deliveries = [
     {
         name: "M1 - Presentation of the lifecycle objectives and calendar for the project.",
-        state: true,
+        state: false,
         data: [
             {
-                name: "Report",
-                link: "",
-                icon: "PDF",
-            },
-            {
-                name: "Presentation",
-                link: "",
-                icon: "TV"
+                name: "MS1-Presentation",
+                link: MS1Presentation,
+                icon: "TV",
             },
         ]
     },

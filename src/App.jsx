@@ -22,13 +22,13 @@ function App() {
           <Link href="#" color="white" underline="none">
             <Stack direction="row" alignItems="center" spacing={2}>
               <Avatar alt="logo" src={Logo} />
-              <Typography variant="h6">Sensing My Home</Typography>
+              <Typography variant="h6">GrowMate</Typography>
             </Stack>
           </Link>
-          <Link href="#goals" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Goals</Link>
-          <Link href="#team" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Team</Link>
-          <Link href="#timeline" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Timeline</Link>
-          <Link href="#deliveries" color="white" sx={{ ml: 3 }} variant="body1" underline="none">Deliveries</Link>
+          <Link href="#goals" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Goals</Link>
+          <Link href="#team" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Team</Link>
+          <Link href="#timeline" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Timeline</Link>
+          <Link href="#deliveries" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Deliveries</Link>
         </Toolbar>
       </AppBar>
       {/* End of Navbar */}
@@ -50,7 +50,7 @@ function App() {
               color="text.primary"
               gutterBottom
             >
-              Sensing My Home
+              GrowMate
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               Mobile App to monitor the health and growth of plants and animals in a domestic environment. Provides helpful tips and recommendations to ensure their well-being.
@@ -147,7 +147,7 @@ function App() {
         <Divider variant="middle"/>
 
         {/* Deliveries */}
-        <Container maxWidth="md" sx={{ pt: 10, pb: 10 }} id="deliveries">
+        <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="deliveries">
           <Typography
             component="h1"
             variant="h2"
