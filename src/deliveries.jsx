@@ -1,4 +1,5 @@
 import MS1Presentation from './assets/presentations/MS1_Presentation.pptx'
+import MS2Presentation from './assets/presentations/MS2_Presentation.pptx'
 
 const Deliveries = [
     {
@@ -14,12 +15,12 @@ const Deliveries = [
     },
     {
         name: "M2 - Presentation of the lifecycle architecture.",
-        state: true,
+        state: false,
         data: [
             {
-                name: "Presentation",
-                link: "",
-                icon: "pdf"
+                name: "MS2-Presentation",
+                link: MS2Presentation,
+                icon: "TV"
             },
         ]
     },

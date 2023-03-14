@@ -6,7 +6,7 @@ import Deliveries from "./deliveries";
 import FileCard from "./components/FileCard";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Logo from "./assets/images/logo.png"
-import TimelineInfo from "../timeline";
+import TimelineInfo from "./timeline"
 import GoalCard from "./components/GoalCard";
 import Goals from  "./goals";
 
@@ -53,7 +53,7 @@ function App() {
               GrowMate
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Mobile App to monitor the health and growth of plants and animals in a domestic environment. Provides helpful tips and recommendations to ensure their well-being.
+              Mobile App to monitor the health and growth of plants in a domestic environment. Provides helpful tips and recommendations to ensure their well-being.
             </Typography>
           </Container>
         </Box>
