@@ -5,6 +5,7 @@ import MembersInfo from "./team";
 import Deliveries from "./deliveries";
 import FileCard from "./components/FileCard";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import Logo from "./assets/images/logo.png"
 import TimelineInfo from "./timeline"
 import GoalCard from "./components/GoalCard";
@@ -19,16 +20,24 @@ function App() {
       {/* Navbar */}
       <AppBar position="fixed">
         <Toolbar>
-          <Link href="#" color="white" underline="none">
+          <Link href="#" color="white" underline="none" sx={{ mr: 3 }}>
             <Stack direction="row" alignItems="center" spacing={2}>
               <Avatar alt="logo" src={Logo} />
               <Typography variant="h6">GrowMate</Typography>
             </Stack>
           </Link>
-          <Link href="#goals" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Goals</Link>
-          <Link href="#team" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Team</Link>
-          <Link href="#timeline" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Timeline</Link>
-          <Link href="#deliveries" color="white" sx={{ ml: 3 }} variant="body1" underline="hover">Deliveries</Link>
+          <Stack direction="row" alignItems="center" spacing={2}>
+            <Link href="#goals" color="white" variant="body1" underline="hover">Goals</Link>
+            <Link href="#team" color="white" variant="body1" underline="hover">Team</Link>
+            <Link href="#timeline" color="white" variant="body1" underline="hover">Timeline</Link>
+            <Link href="#deliveries" color="white" variant="body1" underline="hover">Deliveries</Link>
+          </Stack>
+          <Link href="https://github.com/Sensing-My-Home" color="white" underline="hover" sx={{ flexGrow: 1 }}>
+            <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
+              <GitHubIcon />
+              <Typography variant="body1">Repository</Typography>
+            </Stack>
+          </Link>
         </Toolbar>
       </AppBar>
       {/* End of Navbar */}
@@ -122,6 +131,20 @@ function App() {
           >
             Timeline
           </Typography>
+          <Stack direction="row" spacing={2} justifyContent="center">
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <TimelineDot color="grey"/>
+              <Typography>To Do</Typography>
+            </Stack>
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <TimelineDot color="secondary"/>
+              <Typography>In Progress</Typography>
+            </Stack>
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <TimelineDot color="primary"/>
+              <Typography>Done</Typography>
+            </Stack>
+          </Stack>
           <Timeline position="alternate">
             {TimelineInfo.map((info, index) => {
               return(
