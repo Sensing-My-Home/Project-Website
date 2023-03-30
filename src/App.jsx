@@ -6,10 +6,12 @@ import Deliveries from "./deliveries";
 import FileCard from "./components/FileCard";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ArticleIcon from '@mui/icons-material/Article';
 import Logo from "./assets/images/logo.png"
 import TimelineInfo from "./timeline"
 import GoalCard from "./components/GoalCard";
 import Goals from  "./goals";
+import { Article } from "@mui/icons-material";
 
 function App() {
 
@@ -32,10 +34,16 @@ function App() {
             <Link href="#timeline" color="white" variant="body1" underline="hover">Timeline</Link>
             <Link href="#deliveries" color="white" variant="body1" underline="hover">Deliveries</Link>
           </Stack>
-          <Link href="https://github.com/Sensing-My-Home" color="white" underline="hover" sx={{ flexGrow: 1 }}>
+          <Link href="https://github.com/Sensing-My-Home/Growmate" color="white" underline="hover" sx={{ flexGrow: 1, marginRight: 3 }}>
             <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
               <GitHubIcon />
               <Typography variant="body1">Repository</Typography>
+            </Stack>
+          </Link>
+          <Link href="https://sensing-my-home.github.io/Documentation/" color="white" underline="hover">
+            <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
+              <ArticleIcon />
+              <Typography variant="body1">Documentation</Typography>
             </Stack>
           </Link>
         </Toolbar>
