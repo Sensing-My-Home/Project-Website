@@ -64,31 +64,31 @@ const TimelineInfo = [
         title: "",
         description: "UI Development based on the main core user stories",
         date: "",
-        color: "secondary"
+        color: "primary"
     },
     {
         title: "",
         description: "Core user stories implemented for the demonstration of the full-stack architecture",
         date: "",
-        color: "grey"
+        color: "primary"
     },
     {
         title: "M3",
         description: "Protoype; Mid-Term Presentation",
         date: "11/04/23",
-        color:"grey"
+        color:"primary"
     },
     {
         title: "",
         description: "API and backend stabilization",
         date: "",
-        color: "grey"
+        color: "secondary"
     },
     {
         title: "",
         description: "Final development of the UI",
         date: "",
-        color: "grey"
+        color: "secondary"
     },
     {
         title: "",

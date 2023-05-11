@@ -1,5 +1,6 @@
 import MS1Presentation from './assets/presentations/MS1_Presentation.pptx'
 import MS2Presentation from './assets/presentations/MS2_Presentation.pptx'
+import MS3Presentation from './assets/presentations/MS3_Presentation.pptx'
 
 const Deliveries = [
     {
@@ -26,11 +27,11 @@ const Deliveries = [
     },
     {
         name: "M3 - Prototype.",
-        state: true,
+        state: false,
         data: [
             {
                 name: "Presentation",
-                link: "",
+                link: MS3Presentation,
                 icon: "pdf"
             },
         ]
