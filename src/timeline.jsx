@@ -82,37 +82,37 @@ const TimelineInfo = [
         title: "",
         description: "API and backend stabilization",
         date: "",
-        color: "secondary"
+        color: "primary"
     },
     {
         title: "",
         description: "Final development of the UI",
         date: "",
-        color: "secondary"
+        color: "primary"
     },
     {
         title: "",
         description: "Developing the remaining user stories",
         date: "",
-        color: "grey"
+        color: "primary"
     },
     {
         title: "M4.1",
         description: "",
         date: "01/05/23",
-        color:"grey"
+        color:"primary"
     },
     {
         title: "",
         description: "Integration of additional features",
         date: "",
-        color: "grey"
+        color: "primary"
     },
     {
         title: "",
         description: "Deployment infreastructure stabilization",
         date: "",
-        color: "grey"
+        color: "primary"
     },
     {
         title: "M4",
