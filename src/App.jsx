@@ -7,6 +7,7 @@ import FileCard from "./components/FileCard";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArticleIcon from '@mui/icons-material/Article';
+import CreateIcon from '@mui/icons-material/Create';
 import Logo from "./assets/images/logo.png"
 import TimelineInfo from "./timeline"
 import GoalCard from "./components/GoalCard";
@@ -40,10 +41,16 @@ function App() {
               <Typography variant="body1">Repository</Typography>
             </Stack>
           </Link>
-          <Link href="https://sensing-my-home.github.io/Documentation/" color="white" underline="hover">
+          <Link href="https://sensing-my-home.github.io/Documentation/" color="white" underline="hover" sx={{ marginRight: 3 }}>
             <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
               <ArticleIcon />
               <Typography variant="body1">Documentation</Typography>
+            </Stack>
+          </Link>
+          <Link href="https://documenter.getpostman.com/view/24060738/2s93m8xKtK" color="white" underline="hover">
+            <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
+              <CreateIcon />
+              <Typography variant="body1">API</Typography>
             </Stack>
           </Link>
         </Toolbar>
@@ -60,7 +67,7 @@ function App() {
           }}
         >
           <Grid container spacing={8} direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={6}>
               <Typography
                 component="h1"
                 variant="h2"
@@ -74,7 +81,7 @@ function App() {
                 Mobile App to monitor the health and growth of plants in a domestic environment. Provides helpful tips and recommendations to ensure their well-being.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={6}>
               <Youtube videoId="uP0-BJbaTyA" />
             </Grid>
           </Grid>
