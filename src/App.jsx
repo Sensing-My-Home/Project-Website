@@ -10,8 +10,8 @@ import ArticleIcon from '@mui/icons-material/Article';
 import Logo from "./assets/images/logo.png"
 import TimelineInfo from "./timeline"
 import GoalCard from "./components/GoalCard";
-import Goals from  "./goals";
-import { Article } from "@mui/icons-material";
+import Goals from "./goals";
+import Youtube from 'react-youtube';
 
 function App() {
 
@@ -59,27 +59,32 @@ function App() {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
-            >
-              GrowMate
-            </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Mobile App to monitor the health and growth of plants in a domestic environment. Provides helpful tips and recommendations to ensure their well-being.
-            </Typography>
-          </Container>
+          <Grid container spacing={8} direction="row" justifyContent="center" alignItems="center">
+            <Grid item xs={12} sm={6} md={4}>
+              <Typography
+                component="h1"
+                variant="h2"
+                align="center"
+                color="text.primary"
+                gutterBottom
+              >
+                GrowMate
+              </Typography>
+              <Typography variant="h5" align="center" color="text.secondary" paragraph>
+                Mobile App to monitor the health and growth of plants in a domestic environment. Provides helpful tips and recommendations to ensure their well-being.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <Youtube videoId="uP0-BJbaTyA" />
+            </Grid>
+          </Grid>
         </Box>
         {/* End of Hero Unit */}
 
-        <Divider variant="middle"/>
+        <Divider variant="middle" />
 
         {/* Goals */}
-        <Container maxWidth="md" sx={{ pt:10, pb:6 }} id="goals">
+        <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="goals">
           <Typography
             component="h1"
             variant="h2"
@@ -101,7 +106,7 @@ function App() {
         </Container>
         {/* End of Goals */}
 
-        <Divider variant="middle"/>
+        <Divider variant="middle" />
 
         {/* Project Team */}
         <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="team">
@@ -126,11 +131,11 @@ function App() {
         </Container>
         {/* End of Project Team */}
 
-        <Divider variant="middle"/>
+        <Divider variant="middle" />
 
         {/* Timeline */}
         <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="timeline">
-        <Typography
+          <Typography
             component="h1"
             variant="h2"
             align="center"
@@ -141,27 +146,27 @@ function App() {
           </Typography>
           <Stack direction="row" spacing={2} justifyContent="center">
             <Stack direction="row" alignItems="center" spacing={1}>
-              <TimelineDot color="grey"/>
+              <TimelineDot color="grey" />
               <Typography>To Do</Typography>
             </Stack>
             <Stack direction="row" alignItems="center" spacing={1}>
-              <TimelineDot color="secondary"/>
+              <TimelineDot color="secondary" />
               <Typography>In Progress</Typography>
             </Stack>
             <Stack direction="row" alignItems="center" spacing={1}>
-              <TimelineDot color="primary"/>
+              <TimelineDot color="primary" />
               <Typography>Done</Typography>
             </Stack>
           </Stack>
           <Timeline position="alternate">
             {TimelineInfo.map((info, index) => {
-              return(
+              return (
                 <TimelineItem key={index}>
                   <TimelineOppositeContent color="text.secondary">
                     {info.date}
                   </TimelineOppositeContent>
                   <TimelineSeparator>
-                    <TimelineDot color={info.color}/>
+                    <TimelineDot color={info.color} />
                     <TimelineConnector />
                   </TimelineSeparator>
                   <TimelineContent>
@@ -175,7 +180,7 @@ function App() {
         </Container>
         {/* End of Timeline */}
 
-        <Divider variant="middle"/>
+        <Divider variant="middle" />
 
         {/* Deliveries */}
         <Container maxWidth="md" sx={{ pt: 10, pb: 6 }} id="deliveries">

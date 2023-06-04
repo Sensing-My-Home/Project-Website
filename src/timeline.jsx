@@ -118,7 +118,7 @@ const TimelineInfo = [
         title: "M4",
         description: "Project Presentation",
         date: "30/05/23",
-        color:"grey"
+        color:"primary"
     },
 ];
 
