@@ -1,10 +1,13 @@
 import MS1Presentation from './assets/presentations/MS1_Presentation.pptx'
 import MS2Presentation from './assets/presentations/MS2_Presentation.pptx'
 import MS3Presentation from './assets/presentations/MS3_Presentation.pptx'
+import MS4Presentation from './assets/presentations/MS4_Presentation.pptx'
+
+import Report from './assets/docs/Report.pdf'
 
 const Deliveries = [
     {
-        name: "M1 - Presentation of the lifecycle objectives and calendar for the project.",
+        name: "M1 - Lifecycle objectives and calendar for the project",
         state: false,
         data: [
             {
@@ -15,7 +18,7 @@ const Deliveries = [
         ]
     },
     {
-        name: "M2 - Presentation of the lifecycle architecture.",
+        name: "M2 - Lifecycle architecture",
         state: false,
         data: [
             {
@@ -26,24 +29,29 @@ const Deliveries = [
         ]
     },
     {
-        name: "M3 - Prototype.",
+        name: "M3 - Prototype",
         state: false,
         data: [
             {
                 name: "Presentation",
                 link: MS3Presentation,
-                icon: "pdf"
+                icon: "TV"
             },
         ]
     },
     {
-        name: "M4 - Project Presentation.",
-        state: true,
+        name: "M4 - Final product",
+        state: false,
         data: [
             {
                 name: "Presentation",
-                link: "",
-                icon: "pdf"
+                link: MS4Presentation,
+                icon: "TV"
+            },
+            {
+                name: "Report",
+                link: Report,
+                icon: "PDF"
             },
         ]
     }
